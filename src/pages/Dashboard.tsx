@@ -1,6 +1,6 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
-import { Flame, BookMarked, CheckCircle, Timer, Trophy, TrendingUp } from 'lucide-react';
+import { Flame, BookMarked, CheckCircle, TrendingUp } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/common/Card';
 import { useFlashcardStore } from '@/store/useFlashcardStore';
 import { useQuizStore } from '@/store/useQuizStore';
@@ -268,8 +268,8 @@ export function Dashboard() {
                                     <motion.div
                                         key={achievement.id}
                                         className={`p-4 rounded-lg border-2 transition-all ${achievement.unlocked
-                                                ? 'border-accent-green bg-accent-green bg-opacity-10'
-                                                : 'border-bg-tertiary bg-bg-tertiary opacity-50'
+                                            ? 'border-accent-green bg-accent-green bg-opacity-10'
+                                            : 'border-bg-tertiary bg-bg-tertiary opacity-50'
                                             }`}
                                         whileHover={{ scale: achievement.unlocked ? 1.05 : 1 }}
                                     >

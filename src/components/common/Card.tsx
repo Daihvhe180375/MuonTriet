@@ -1,8 +1,8 @@
-import React from 'react';
+import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
 interface CardProps {
-    children: React.ReactNode;
+    children: ReactNode;
     className?: string;
     hover?: boolean;
     onClick?: () => void;
@@ -22,7 +22,7 @@ export function Card({ children, className = '', hover = true, onClick }: CardPr
 }
 
 interface CardHeaderProps {
-    children: React.ReactNode;
+    children: ReactNode;
     className?: string;
 }
 
@@ -31,7 +31,7 @@ export function CardHeader({ children, className = '' }: CardHeaderProps) {
 }
 
 interface CardTitleProps {
-    children: React.ReactNode;
+    children: ReactNode;
     className?: string;
 }
 
@@ -40,7 +40,7 @@ export function CardTitle({ children, className = '' }: CardTitleProps) {
 }
 
 interface CardContentProps {
-    children: React.ReactNode;
+    children: ReactNode;
     className?: string;
 }
 
@@ -49,7 +49,7 @@ export function CardContent({ children, className = '' }: CardContentProps) {
 }
 
 interface CardFooterProps {
-    children: React.ReactNode;
+    children: ReactNode;
     className?: string;
 }
 

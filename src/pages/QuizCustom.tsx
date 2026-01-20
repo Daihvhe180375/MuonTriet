@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Trash2, Play, CheckCircle, XCircle, X, History } from 'lucide-react';
 import Confetti from 'react-confetti';
@@ -252,8 +252,8 @@ export function QuizCustom() {
                                                                 minute: '2-digit'
                                                             })}</span>
                                                             <span className={`font-semibold ${attempt.score >= 80 ? 'text-accent-green' :
-                                                                    attempt.score >= 60 ? 'text-accent-blue' :
-                                                                        'text-accent-yellow'
+                                                                attempt.score >= 60 ? 'text-accent-blue' :
+                                                                    'text-accent-yellow'
                                                                 }`}>
                                                                 {attempt.score}% ({attempt.correctAnswers}/{attempt.totalQuestions})
                                                             </span>
@@ -285,8 +285,8 @@ export function QuizCustom() {
                                         key={key}
                                         onClick={() => toggleCategory(key)}
                                         className={`px-4 py-2 rounded-lg text-left transition-all ${selectedCategories.includes(key)
-                                                ? 'bg-accent-blue text-white'
-                                                : 'bg-bg-tertiary text-text-secondary hover:bg-bg-secondary'
+                                            ? 'bg-accent-blue text-white'
+                                            : 'bg-bg-tertiary text-text-secondary hover:bg-bg-secondary'
                                             }`}
                                     >
                                         {label}
@@ -303,8 +303,8 @@ export function QuizCustom() {
                                         key={key}
                                         onClick={() => setSelectedDifficulty(key)}
                                         className={`px-4 py-2 rounded-lg transition-all ${selectedDifficulty === key
-                                                ? 'bg-accent-purple text-white'
-                                                : 'bg-bg-tertiary text-text-secondary hover:bg-bg-secondary'
+                                            ? 'bg-accent-purple text-white'
+                                            : 'bg-bg-tertiary text-text-secondary hover:bg-bg-secondary'
                                             }`}
                                     >
                                         {label}
@@ -321,8 +321,8 @@ export function QuizCustom() {
                                         key={count}
                                         onClick={() => setQuestionCount(count)}
                                         className={`flex-1 px-4 py-2 rounded-lg transition-all ${questionCount === count
-                                                ? 'bg-accent-green text-white'
-                                                : 'bg-bg-tertiary text-text-secondary hover:bg-bg-secondary'
+                                            ? 'bg-accent-green text-white'
+                                            : 'bg-bg-tertiary text-text-secondary hover:bg-bg-secondary'
                                             }`}
                                     >
                                         {count}
@@ -339,8 +339,8 @@ export function QuizCustom() {
                             <button
                                 onClick={() => setTimedMode(!timedMode)}
                                 className={`px-4 py-2 rounded-lg transition-colors ${timedMode
-                                        ? 'bg-accent-blue text-white'
-                                        : 'bg-bg-secondary text-text-secondary'
+                                    ? 'bg-accent-blue text-white'
+                                    : 'bg-bg-secondary text-text-secondary'
                                     }`}
                             >
                                 {timedMode ? 'Bật' : 'Tắt'}
@@ -398,8 +398,8 @@ export function QuizCustom() {
                                         </div>
                                         <div className="text-right">
                                             <p className={`text-2xl font-bold ${attempt.score >= 80 ? 'text-accent-green' :
-                                                    attempt.score >= 60 ? 'text-accent-blue' :
-                                                        'text-accent-yellow'
+                                                attempt.score >= 60 ? 'text-accent-blue' :
+                                                    'text-accent-yellow'
                                                 }`}>
                                                 {attempt.score}%
                                             </p>

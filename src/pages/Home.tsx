@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { RefreshCw, BookOpen, Target, Timer, Flame, BookMarked, CheckCircle } from 'lucide-react';
+import { RefreshCw, BookOpen, Flame, BookMarked, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/common/Button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/common/Card';
 import { Modal } from '@/components/common/Modal';

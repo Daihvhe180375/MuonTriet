@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, RotateCw, Check, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/common/Button';
@@ -27,11 +27,11 @@ export function Flashcard() {
         currentIndex,
         isFlipped,
         mastered,
-        reviewing,
+        // reviewing, // unused
         selectedCategory,
         selectedDifficulty,
         studyMode,
-        setCurrentIndex,
+        // setCurrentIndex, // unused
         nextCard,
         previousCard,
         toggleFlip,
@@ -104,8 +104,8 @@ export function Flashcard() {
                                 <button
                                     onClick={() => setCategory('all')}
                                     className={`w-full text-left px-3 py-2 rounded transition-colors ${selectedCategory === 'all'
-                                            ? 'bg-accent-blue text-white'
-                                            : 'text-text-secondary hover:bg-bg-tertiary'
+                                        ? 'bg-accent-blue text-white'
+                                        : 'text-text-secondary hover:bg-bg-tertiary'
                                         }`}
                                 >
                                     Tất cả
@@ -115,8 +115,8 @@ export function Flashcard() {
                                         key={key}
                                         onClick={() => setCategory(key as Category)}
                                         className={`w-full text-left px-3 py-2 rounded transition-colors ${selectedCategory === key
-                                                ? 'bg-accent-blue text-white'
-                                                : 'text-text-secondary hover:bg-bg-tertiary'
+                                            ? 'bg-accent-blue text-white'
+                                            : 'text-text-secondary hover:bg-bg-tertiary'
                                             }`}
                                     >
                                         {label}
@@ -131,8 +131,8 @@ export function Flashcard() {
                                 <button
                                     onClick={() => setDifficulty('all')}
                                     className={`w-full text-left px-3 py-2 rounded transition-colors ${selectedDifficulty === 'all'
-                                            ? 'bg-accent-purple text-white'
-                                            : 'text-text-secondary hover:bg-bg-tertiary'
+                                        ? 'bg-accent-purple text-white'
+                                        : 'text-text-secondary hover:bg-bg-tertiary'
                                         }`}
                                 >
                                     Tất cả
@@ -142,8 +142,8 @@ export function Flashcard() {
                                         key={key}
                                         onClick={() => setDifficulty(key as Difficulty)}
                                         className={`w-full text-left px-3 py-2 rounded transition-colors ${selectedDifficulty === key
-                                                ? 'bg-accent-purple text-white'
-                                                : 'text-text-secondary hover:bg-bg-tertiary'
+                                            ? 'bg-accent-purple text-white'
+                                            : 'text-text-secondary hover:bg-bg-tertiary'
                                             }`}
                                     >
                                         {label}
@@ -164,8 +164,8 @@ export function Flashcard() {
                                         key={mode.key}
                                         onClick={() => setStudyMode(mode.key as any)}
                                         className={`w-full text-left px-3 py-2 rounded transition-colors ${studyMode === mode.key
-                                                ? 'bg-accent-green text-white'
-                                                : 'text-text-secondary hover:bg-bg-tertiary'
+                                            ? 'bg-accent-green text-white'
+                                            : 'text-text-secondary hover:bg-bg-tertiary'
                                             }`}
                                     >
                                         {mode.label}

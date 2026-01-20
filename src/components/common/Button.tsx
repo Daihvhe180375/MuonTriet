@@ -1,9 +1,9 @@
-import React from 'react';
+import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
 
 interface ButtonProps {
-    children: React.ReactNode;
+    children: ReactNode;
     variant?: 'primary' | 'secondary' | 'ghost';
     size?: 'sm' | 'md' | 'lg';
     icon?: LucideIcon;

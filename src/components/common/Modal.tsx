@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react';
+import { useEffect, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
-import { Button } from './Button';
 
 interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
     title?: string;
-    children: React.ReactNode;
+    children: ReactNode;
     size?: 'sm' | 'md' | 'lg';
 }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Pause, RotateCcw, Settings } from 'lucide-react';
 import { Button } from '@/components/common/Button';
@@ -72,7 +72,7 @@ export function Pomodoro() {
     const [showSettings, setShowSettings] = useState(false);
     const [currentQuote, setCurrentQuote] = useState(getRandomQuote());
 
-    const intervalRef = useRef<NodeJS.Timeout | null>(null);
+    const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
     // Save state to localStorage whenever it changes
     useEffect(() => {
@@ -252,8 +252,8 @@ export function Pomodoro() {
                                     <div
                                         key={idx}
                                         className={`w-3 h-3 rounded-full ${idx < completedSessions % settings.sessionsUntilLongBreak
-                                                ? 'bg-white'
-                                                : 'bg-white bg-opacity-30'
+                                            ? 'bg-white'
+                                            : 'bg-white bg-opacity-30'
                                             }`}
                                     />
                                 ))}
@@ -362,8 +362,8 @@ export function Pomodoro() {
                                             }
                                         }}
                                         className={`px-4 py-2 rounded transition-colors ${settings.workDuration === duration
-                                                ? 'bg-accent-blue text-white'
-                                                : 'bg-bg-tertiary text-text-secondary hover:bg-bg-secondary'
+                                            ? 'bg-accent-blue text-white'
+                                            : 'bg-bg-tertiary text-text-secondary hover:bg-bg-secondary'
                                             }`}
                                     >
                                         {duration}
@@ -409,8 +409,8 @@ export function Pomodoro() {
                             <button
                                 onClick={() => setSettings({ ...settings, soundEnabled: !settings.soundEnabled })}
                                 className={`px-4 py-2 rounded transition-colors ${settings.soundEnabled
-                                        ? 'bg-accent-green text-white'
-                                        : 'bg-bg-tertiary text-text-secondary'
+                                    ? 'bg-accent-green text-white'
+                                    : 'bg-bg-tertiary text-text-secondary'
                                     }`}
                             >
                                 {settings.soundEnabled ? 'Bật' : 'Tắt'}
